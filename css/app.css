@@ -1,0 +1,261 @@
+@font-face
+{
+font-family: tipFont;
+src: url('./img/锐字云细圆体.TTF'),
+}
+@font-face
+{
+font-family: gbkFont;
+src: url('./img/锐字云字库准圆体GBK.TTF'),
+}
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:   rgb(164,154,140);
+    font-family: tipFont;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    rgb(164,154,140);
+   font-family: tipFont;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    rgb(164,154,140);
+   font-family: tipFont;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    rgb(164,154,140);
+   font-family: tipFont;
+}
+
+* {
+    font-family: "微软雅黑";    
+}
+
+body {
+    margin: 0 auto;
+    padding: 0 auto;
+    overflow-x: hidden;
+	font-size: 0.26rem;
+}
+img {
+    border: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* 背景图片*/
+.bg {
+    background-image: url("../img/background.jpg");
+}
+/*end 背景图片*/
+
+/*头部图片*/
+.top_img {
+    width: 100%;
+    height: auto;    
+    margin-bottom: 0.2rem;
+}
+/*end头部图片*/
+
+/*信息模块 info*/
+.info{
+    width:5.58rem;
+    margin: 0.32rem auto 0;
+    background: #fff;  
+    border:0.01rem solid rgb(164,154,140);
+    border-radius: 0.2rem;
+    
+}
+.info .info-img{    
+    position: relative;
+    top: -0.32rem;
+    margin-bottom: -0.32rem;
+    height: auto;
+}
+.info-img img{
+	width:0.56rem;
+	height: 0.56rem;
+}
+.info li{
+    display: flex;
+    height: 0.98rem;
+    justify-content: center;
+    align-items: center;
+}
+.info li span{
+    flex: none;
+    margin-left: 0.2rem;
+    color: #f00; 
+    /*opacity: 0;*/
+   	margin-right: 0.04rem;
+}
+.opac{
+	opacity: 0 !important;
+}
+
+.info input[type="text"],.info input[type="number"],.info input[type="tel"]{
+    flex: auto;
+    border:none;
+    margin-right: 0.2rem;
+    outline: none;
+    height: 80%;
+    font-size: 0.26rem;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+.info .input-last{
+    /*border-bottom-right-radius: 2rem;*/
+}
+.border-btm{
+    border-bottom:0.01rem solid rgb(164,154,140);
+}
+/*end 信息模块*/
+
+/*学历*/
+.edu{
+	width:5.58rem;
+	background: #fff;
+	margin: 0.64rem auto 0;
+	border-radius: 0.2rem;
+	border:0.01rem solid rgb(164,154,140);
+}
+.edu-img{
+	display: flex;
+    justify-content: center;
+    position: relative;
+    top: -0.32rem;
+}
+.edu-img img{
+	width:0.56rem;
+	height: 0.56rem;
+}
+.edu>ul>li{
+	padding-left: 0.34rem;	
+	padding-right: 0.34rem;
+}
+.edu>ul>li>ul{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+.edu>ul>li>ul li{
+	flex:1;
+	color:rgb(118,111,101);
+	letter-spacing: 0.01rem;
+	font-size: 0.26rem;
+	position: relative;
+	font-family: tipFont;
+}
+.edu>ul>li>ul li>img{
+	width: 0.29rem;
+	height: 0.29rem;
+	vertical-align: middle;
+	margin-top: -0.06rem;
+	margin-right: 0.04rem;
+}
+.edu input[type="radio"]{
+	margin:0;
+	padding: 0;
+	/*vertical-align:middle;
+	margin-top:-0.02rem;	
+	margin-right: 0.02rem;*/
+	background: url(../img/radio_active.png);
+	position: absolute;
+    top: 0.08rem;
+    left: 0.03rem;
+    opacity: 0;
+}
+.edu .title{
+	color: rgb(213,90,43);
+	padding-bottom: 0.03rem;
+	font-size: 0.23rem;
+}
+.edu .btmbox{
+	padding-bottom: 0.85rem;
+}
+.edu .li-top{
+	padding-top: 0.25rem;
+}
+/*end 学历*/
+
+/*备注*/
+.remark{
+	width:5.58rem;
+	background: #fff;
+	margin: 0.96rem auto 0;
+	border-radius: 0.2rem;
+	border:0.01rem solid rgb(164,154,140);
+}
+.remark-img{
+	display: flex;
+    justify-content: center;
+    position: relative;
+    top: -0.32rem;
+}
+.remark img{
+	width:0.56rem;
+	height: 0.56rem;
+}
+.remark .remark-content{
+	margin: 0 0.34rem;
+}
+.remark-content textarea{
+	width: 100%;
+	height: 3rem;
+	resize:none;
+	border: none;
+	margin-bottom: 0.3rem;
+	font-size: 0.26rem;
+	outline: none;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+/*end 备注*/
+
+/*tips*/
+.tips li{
+	display: flex;
+    justify-content: center;
+    position: relative;
+    font-size: 0.24rem;
+}
+.tips img{
+	width:0.56rem;
+	height: 0.56rem;
+	margin-top: 1rem;
+	padding-bottom: 0.28rem;
+}
+.tips li{
+	color: rgb(213,90,43);
+	padding-bottom: 0.18rem;
+}
+/*end tips*/
+
+.sub{
+	text-align: center;
+	margin: 0.8rem 0 0.54rem;
+}
+.sub input{
+	width: 5.58rem;
+	height: 0.96rem;
+	background: url(../img/sub.png) no-repeat;
+	background-size: 100% 100%;
+	border: none;
+	outline: none;
+}
+
+.addCla{
+	font-weight: 600;
+	color:rgb(27,27,27) !important;
+}
+
+

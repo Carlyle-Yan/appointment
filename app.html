@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <script type="text/javascript">
+    	(function (doc, win) {
+    	    var docEl = doc.documentElement,
+    	        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    	        recalc = function () {
+    	            var clientWidth = docEl.clientWidth;
+    	            if (!clientWidth) return;
+    	            if(clientWidth>=640){
+    	                docEl.style.fontSize = '100px';
+    	            }else{
+    	                docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+    	            }
+    	        };
+
+    	    if (!doc.addEventListener) return;
+    	    win.addEventListener(resizeEvt, recalc, false);
+    	    doc.addEventListener('DOMContentLoaded', recalc, false);
+    	})(document, window);    	
+    </script>
+    <script src="js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/app.js" type="text/javascript" charset="utf-8"></script>
+    <title>appointment</title>
+    <link rel="stylesheet" href="./css/app.css">
+</head>
+
+<body class="bg">
+    <img class="top_img" src="./img/top_img.jpg" alt="">
+    <form >
+        <div class="info">
+            <ul>
+                <li class="info-img">
+                    <img src="./img/info_per.png" alt="">
+                </li>
+                <li class="border-btm">
+                    <span>*</span>
+                    <input type="text" id="lastName" name="lastName" placeholder="姓氏：">
+                </li>
+                <li class="border-btm">
+                    <span>&nbsp;</span>
+                    <input type="text" id="firstName" name="firstName" placeholder="名字：">
+                </li>
+                <li class="border-btm">
+                    <span>*</span>
+                    <input type="text" id="taobao" name="taobao" placeholder="淘宝旺旺账号：">
+                </li>
+                <li class="border-btm">
+                    <span>*</span>
+                    <input type="tel" id="iphone" name="iphone" placeholder="手机号码：">
+                </li>
+                <li class="border-btm">
+                    <span>*</span>
+                    <input type="text" id="weixin" name="weixin" placeholder="微信账号：">
+                </li>
+                <li>
+                    <span>&nbsp;</span>
+                    <input class="input-last" id="qq" name="qq" type="number" placeholder="QQ号码">
+                </li>
+
+            </ul>
+        </div>
+        
+		<div class="edu">			
+			<ul>
+				<li class="edu-img"><img src="./img/choice.png" alt=""></li>
+				<li class="border-btm title">
+					学历：
+				</li>
+				<li class="li-top">
+					<ul>
+						<li><input name="educ" type="radio"><img src="img/radio.png"/>本科</li>
+	                	<li><input name="educ" type="radio"><img src="img/radio.png"/>高中</li>
+	                	<li><input name="educ" type="radio"><img src="img/radio.png"/>硕士</li>
+					</ul>
+				</li>
+				<li class="btmbox li-top">
+					<ul>
+						<li><input name="educ" type="radio"><img src="img/radio.png"/>大专</li>
+	                	<li><input name="educ" type="radio"><img src="img/radio.png"/>初中</li>
+	                	<li><input name="educ" type="radio"><img src="img/radio.png"/>其他</li>
+					</ul>
+				</li>
+				<li class="border-btm title">
+					就业情况：
+				</li>
+				<li class="btmbox li-top">
+					<ul>
+						<li><input name="jobSt" type="radio"><img src="img/radio.png"/>在校学生</li>
+	                	<li><input name="jobSt" type="radio"><img src="img/radio.png"/>已毕业</li>
+	                	<li>&nbsp;</li>
+					</ul>
+				</li>
+				<li class="border-btm title">
+					希望入学年份：
+				</li>
+				<li class="btmbox li-top">
+					<ul>
+						<li><input name="hpYe" type="radio"><img src="img/radio.png"/>2018年</li>
+	                	<li><input name="hpYe" type="radio"><img src="img/radio.png"/>2019年</li>
+	                	<li><input name="hpYe" type="radio"><img src="img/radio.png"/>2020年</li>
+					</ul>
+				</li>
+				<li class="border-btm title">是否想移民：</li>
+				<li class="btmbox li-top">
+					<ul>
+						<li><input name="isImm" type="radio"><img src="img/radio.png"/>暂不明确</li>
+	                	<li><input name="isImm" type="radio"><img src="img/radio.png"/>想移民</li>
+	                	<li><input name="isImm" type="radio"><img src="img/radio.png"/>不想</li>
+					</ul>
+				</li>
+			</ul>			
+		</div>
+		
+		<div class="remark">
+	        <ul>
+	            <li class="remark-img"><img src="./img/remark.png" alt=""></li>
+	            <li class="remark-content">
+	            	<textarea maxlength="500" placeholder="信息或特殊要求的补充， 填上您方便咨询的时间段, 例如9-11am"></textarea>
+	            </li>
+	        </ul>			
+		</div>
+
+        <ul class="tips">
+            <li><img src="./img/smile.png" alt=""></li>
+            <li>如果您的信息越全面, 规划师可以提前准备更多资料</li>
+            <li>会给您带来更精准优质的咨询体验哦~</li>
+        </ul>
+        <div class="sub">
+	        <input type="submit" value="" id="sub-btn">
+        </div>
+    </form>
+</body>
+</html>
