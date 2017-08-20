@@ -119,4 +119,21 @@ $(document).ready(function(){
 	$(".remark-content textarea").blur(function(){
 	    $(".remark-img img").attr("src","./img/remark.png");
 	});
+	
+	// required jQuery
+	var placeholder = '信息或特殊要求的补充， \n填上您方便咨询的时间段, 例如9-11am';
+	$('textarea').val(placeholder);
+	$("textarea").css("color","rgb(164,154,140)");
+	$('textarea').focus(function() {		
+	    if ($(this).val() == placeholder) {
+	        $(this).val('');
+	        $(this).css("color","rgb(0,0,0)");
+	    }
+	});
+	$('textarea').blur(function() {
+	    if ($(this).val() == '') {
+	        $(this).val(placeholder);
+	        $(this).css("color","rgb(164,154,140)");
+	    }
+	})
 });
